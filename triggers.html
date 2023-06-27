@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SQL</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>SQL: DDL, DML e Triggers</h1>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Introdução</a></li>
+            <li><a href="./ddl.html">DDL</a></li>
+            <li><a href="./dml.html">DML</a></li>
+            <li><a href="./triggers.html">TRIGGERS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="ddl">
+            <h2>O que são Triggers:</h2>
+            <p>Triggers são objetos especiais em bancos de dados que são acionados automaticamente em resposta a certos
+                eventos, como inserção, atualização ou exclusão de dados. <br>Os triggers são usados para aplicar regras
+                de negócios, realizar validações ou executar tarefas automatizadas.</p>
+            <h2>Como funcionam os Triggers:</h2>
+            <p>Quando um evento específico ocorre, o trigger associado a esse evento é ativado e executa o conjunto de
+                ações definido nele.
+            <p>Os eventos comuns que acionam triggers incluem:</p>
+            <ul>
+                <li> INSERT: O trigger é acionado quando novos dados são inseridos em uma tabela.</li>
+                <li>UPDATE: O trigger é acionado quando os dados em uma tabela são atualizados.</li>
+                <li>DELETE: O trigger é acionado quando os dados são excluídos de uma tabela.</li>
+            </ul>
+            </p>
+            <button onclick="showExemple('trigger')">Clique para ver um exemplo de TRIGGER</button>
+            <pre id="trigger" class="hidden">
+                        <code>
+                            CREATE TRIGGER nome_trigger 
+                            AFTER INSERT/UPDATE/DELETE ON nome_tabela
+                            FOR EACH ROW
+                            BEGIN
+                                -- Ações do trigger aqui
+                            END;                                                                                           
+                        </code>
+                    </pre>
+            <h4>O trigger é associado a uma tabela específica e é executado após um evento (INSERT, UPDATE ou DELETE).
+                As ações do trigger são definidas dentro do bloco BEGIN-END.</h4>
+        </section>
+    </main>
+
+    <footer>
+        <p>AS64C - Certificadora De Competência Comum</p>
+    </footer>
+
+    <script>
+        function showExemple(ele) {
+            var code = document.getElementById(ele);
+            code.classList.toggle('hidden')
+        }
+    </script>
+</body>
+
+</html>

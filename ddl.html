@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SQL</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>SQL: DDL, DML e Triggers</h1>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Introdução</a></li>
+            <li><a href="./ddl.html">DDL</a></li>
+            <li><a href="./dml.html">DML</a></li>
+            <li><a href="./triggers.html">TRIGGERS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="ddl">
+            <h2>Data Definition Language (DDL)</h2>
+            <p>DDL é uma parte importante da linguagem SQL que permite criar, alterar e excluir objetos de banco de
+                dados, como tabelas, índices e restrições.</p>
+            <h2>Os principais comandos DDL incluem:</h2>
+            <ul>
+                <li>
+                    <b>CREATE:</b>
+                    <p> O comando CREATE é usado para criar objetos de banco de dados, como tabelas, índices
+                        e visões. Por exemplo, CREATE TABLE é usado para criar uma nova tabela.</p>
+                    <button onclick="showExemple('create')">Clique para ver um exemplo de CREATE</button>
+                    <pre id="create" class="hidden">
+                        <code>
+                            CREATE TABLE nome_tabela (
+                                coluna1 tipo_dado1,
+                                coluna2 tipo_dado2,
+                                ...
+                             );                             
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <b>ALTER:</b>
+                    <p>O comando ALTER permite modificar a estrutura de objetos existentes no banco de dados.
+                        Por exemplo, ALTER TABLE é usado para adicionar uma nova coluna a uma tabela existente.</p>
+                    <button onclick="showExemple('alter')">Clique para ver um exemplo de ALTER</button>
+                    <pre id="alter" class="hidden">
+                        <code>
+                            ALTER TABLE nome_tabela
+                            ADD coluna tipo_dado;                                                     
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <b>DROP:</b>
+                    <p>O comando DROP é usado para excluir objetos de banco de dados, como tabelas ou índices.
+                        Por exemplo, DROP TABLE é usado para excluir uma tabela.</p>
+                    <button onclick="showExemple('drop')">Clique para ver um exemplo de DROP</button>
+                    <pre id="drop" class="hidden">
+                        <code>
+                            DROP TABLE nome_tabela;                                                
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+            <h4>Esses são os comandos básicos DDL no SQL. Cada um deles desempenha um papel importante na
+                criação e manipulação de tabelas em um banco de dados.</h4>
+        </section>
+    </main>
+
+    <footer>
+        <p>AS64C - Certificadora De Competência Comum</p>
+    </footer>
+
+    <script>
+        function showExemple(ele) {
+            var code = document.getElementById(ele);
+            code.classList.toggle('hidden')
+        }
+    </script>
+</body>
+
+</html>

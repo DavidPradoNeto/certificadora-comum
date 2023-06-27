@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SQL</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>SQL: DDL, DML e Triggers</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Introdução</a></li>
+            <li><a href="./ddl.html">DDL</a></li>
+            <li><a href="./dml.html">DML</a></li>
+            <li><a href="./triggers.html">TRIGGERS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="ddl">
+            <h2>Data Manipulation Language (DML)</h2>
+            <p>DML é outra parte importante da linguagem SQL que permite manipular os dados em um banco de dados.</p>
+            <h2>Os principais comandos DML incluem:</h2>
+            <ul>
+                <li>
+                    <b>SELECT:</b>
+                    <p> O comando SELECT é usado para recuperar dados de uma ou mais tabelas em um banco de dados. Ele
+                        permite filtrar os dados, classificá-los e realizar operações de junção. É o comando mais
+                        comumente usado em SQL.</p>
+                    <button onclick="showExemple('select')">Clique para ver um exemplo de SELECT</button>
+                    <pre id="select" class="hidden">
+                        <code>
+                            SELECT coluna1, coluna2
+                            FROM nome_tabela
+                            WHERE condição;                                                     
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <b>INSERT:</b>
+                    <p>O comando INSERT é usado para inserir novos registros em uma tabela existente. Podemos inserir
+                        valores específicos em cada coluna ou inserir registros a partir de uma consulta SELECT.</p>
+                    <button onclick="showExemple('insert')">Clique para ver um exemplo de INSERT</button>
+                    <pre id="insert" class="hidden">
+                        <code>
+                            INSERT INTO nome_tabela (coluna1, coluna2)
+                            VALUES (valor1, valor2);
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <b>UPDATE:</b>
+                    <p>O comando UPDATE é usado para modificar os dados existentes em uma tabela. Podemos atualizar
+                        valores em uma ou mais colunas com base em certas condições.</p>
+                    <button onclick="showExemple('update')">Clique para ver um exemplo de UPDATE</button>
+                    <pre id="update" class="hidden">
+                        <code>
+                            UPDATE nome_tabela
+                            SET coluna = novo_valor
+                            WHERE condição;                                                                         
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <b>DELETE:</b>
+                    <p>O comando DELETE é usado para excluir registros de uma tabela com base em certas condições. Os
+                        registros são removidos permanentemente do banco de dados.</p>
+                    <button onclick="showExemple('delete')">Clique para ver um exemplo de DELETE</button>
+                    <pre id="delete" class="hidden">
+                        <code>
+                            DELETE FROM nome_tabela
+                            WHERE condição;                                                                     
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+            <h4>Esses são os comandos básicos DML no SQL. Cada um deles desempenha um papel importante na
+                criação, modificação e manipulação de dados em um banco de dados.</h4>
+        </section>
+    </main>
+
+    <footer>
+        <p>AS64C - Certificadora De Competência Comum</p>
+    </footer>
+
+    <script>
+        function showExemple(ele) {
+            var code = document.getElementById(ele);
+            code.classList.toggle('hidden')
+        }
+    </script>
+</body>
+
+</html>
